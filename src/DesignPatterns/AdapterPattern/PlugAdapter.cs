@@ -7,18 +7,11 @@ namespace AdapterPattern
     /// <summary>
     /// The Adapter makes the Adaptee's interface compatible with the Target's interface
     /// </summary>
-    public class PlugConnectorAdapter : PlugConnector
+    public class PlugConnectorAdapter
     {
-        private UKPlugSocket _socket;
-
-        public PlugConnectorAdapter(UKPlugSocket socket)
+        public PlugConnectorAdapter()
         {
-            _socket = socket;
-        }
 
-        public void Connect()
-        {
-            _socket.ProvideUKSocket();
         }
     }
 }

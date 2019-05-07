@@ -15,22 +15,16 @@ namespace AdapterPattern
         void ProvideUKSocket();
     }
 
-    public class DefaultElectricalSocket : PlugConnector
+    public class DefaultElectricalSocket 
     {
-        public void Connect()
-        {
-            Console.WriteLine("Using electrical socket from Spain!");
-        }
+        
     }
 
     /// <summary>
     /// The Adaptee contains the new behaviour but its interface is incompatible
     /// </summary>
-    public class UKElectricalSocket : UKPlugSocket
+    public class UKElectricalSocket
     {
-        public void ProvideUKSocket()
-        {
-            Console.WriteLine("Using electrical socket from UK!");
-        }
+        
     }
 }

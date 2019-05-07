@@ -9,11 +9,10 @@ namespace StrategyPattern
     public class SortedList
     {
         private List<string> _list = new List<string>();
-        private SortStrategy _sortstrategy;
 
-        public void SetSortStrategy(SortStrategy sortstrategy)
+        public void SetSortStrategy()
         {
-            _sortstrategy = sortstrategy;
+           
         }
 
         public void Add(string name)
@@ -22,8 +21,8 @@ namespace StrategyPattern
         }
 
         public void Sort()
-        {
-            _sortstrategy.Sort(_list);
+        {  
+            // Use strategy
 
             foreach (string name in _list)
             {

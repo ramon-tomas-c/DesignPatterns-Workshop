@@ -20,31 +20,9 @@ namespace BuilderPattern
     /// <summary>
     /// The ConcreteBuilder class
     /// </summary>
-    public class LowCostVehicleBuilder : Builder
+    public class LowCostVehicleBuilder
 
     {
-        private Vehicle _product = new Vehicle();
-
-        public override void AddCarInterior()
-        {
-            _product.Add("InteriorComponents Assembled!");
-        }
-
-        public override void AddEngine()
-        {
-            _product.Add("BuildEngine Assembled!");
-        }
-
-        public override void AddWheels()
-        {
-            _product.Add("BuildWheels Assembled!");
-        }
-
-        public override void AddWindows()
-        {
-            _product.Add("BuildWindows Assembled!");
-        }
-
-        public override Vehicle GetVehicle() => _product;
+        private Vehicle _product = new Vehicle();       
     }
 }

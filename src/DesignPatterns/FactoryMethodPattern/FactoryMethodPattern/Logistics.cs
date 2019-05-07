@@ -10,7 +10,7 @@ namespace FactoryMethodPattern
         // Constructor calls abstract Factory method
         public Logistics()
         {
-            this.CreateTransport();
+            
         }
 
         // Factory Method

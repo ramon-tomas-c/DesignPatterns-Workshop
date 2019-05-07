@@ -12,30 +12,25 @@ namespace Api.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly IRepository<Order> _repository;
-        public OrdersController(IRepository<Order> repository)
+
+        public OrdersController()
         {
-            _repository = repository;
+            
         }
 
         // GET api/orders
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_repository.GetAll());
+            return Ok();
         }
 
         // GET api/orders/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var order = _repository.GetById(id);
-            if (order == null)
-            {
-                return BadRequest();
-            }
-
-            return Ok(order);
+            
+            return Ok();
         }
 
         // POST api/orders
@@ -47,9 +42,7 @@ namespace Api.Controllers
                 OrderDate = DateTime.Now
             };
 
-            _repository.Create(order);
-            _repository.Save();
-
+           
             return Ok();
         }
 
@@ -57,19 +50,9 @@ namespace Api.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id)
         {
-            var order = _repository.GetById(id);
-            if(order == null)
-            {
-                return BadRequest();
-            }
+           
 
-            var item = new OrderItem() { Desc = "new Item" };
-
-            order.OrderItems.Add(item);
-
-            _repository.Update(order);
-            _repository.Save();
-
+            
             return Ok();
         }
 
@@ -77,15 +60,7 @@ namespace Api.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var order = _repository.GetById(id);
-            if (order == null)
-            {
-                return BadRequest();
-            }
-
-            _repository.Delete(order);
-            _repository.Save();
-
+            
             return Ok();
         }
     }

@@ -12,10 +12,7 @@ namespace BuilderPattern
         // Builder uses a complex series of steps
         public void Build(Builder builder)
         {
-            builder.AddEngine();
-            builder.AddWheels();
-            builder.AddWindows();
-            builder.AddCarInterior();
+            
         }
     }
 }

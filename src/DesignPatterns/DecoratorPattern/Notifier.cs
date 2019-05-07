@@ -10,11 +10,8 @@ namespace DecoratorPattern
     /// <summary>
     /// Concrete component
     /// </summary>
-    public class DefaultNotifier : Notifier
+    public class DefaultNotifier
     {
-        public override void Send(string msg)
-        {
-            Console.WriteLine($"Sending Message to Email: {msg}");
-        }
+        
     }
 }

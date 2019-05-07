@@ -5,12 +5,9 @@ using System.Text;
 namespace FactoryMethodPattern
 {
     // Concrete Creator
-    public class SeaLogistics : Logistics
+    public class SeaLogistics 
     {
         // Factory Method implementation
-        public override void CreateTransport()
-        {
-            vehicleList.Add(new Ship());
-        }
+       
     }
 }

@@ -13,41 +13,33 @@ namespace DecoratorPattern
 
         public Decorator(Notifier notifier)
         {
-            _notifier = notifier;
+
         }
 
         public override void Send(string msg)
         {
-            _notifier.Send(msg);
+
         }
     }
 
     /// <summary>
     /// Specific Decorators
     /// </summary>
-    public class FaceBookNotifierDecorator : Decorator
+    public class FaceBookNotifierDecorator
     {
-        public FaceBookNotifierDecorator(Notifier notifier) : base(notifier)
+        public FaceBookNotifierDecorator(Notifier notifier) 
         {
         }
 
-        public override void Send(string msg)
-        {
-            base.Send(msg);
-            Console.WriteLine($"Sending Message to Facebook: {msg}");
-        }
+       
     }
 
-    public class SMSNotifierDecorator : Decorator
+    public class SMSNotifierDecorator 
     {
-        public SMSNotifierDecorator(Notifier notifier) : base(notifier)
+        public SMSNotifierDecorator(Notifier notifier) 
         {
         }
 
-        public override void Send(string msg)
-        {
-            base.Send(msg);
-            Console.WriteLine($"Sending Message to SMS: {msg}");
-        }
+       
     }
 }

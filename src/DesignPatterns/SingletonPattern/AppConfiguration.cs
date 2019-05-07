@@ -21,8 +21,7 @@ namespace SingletonPattern
             _instanceId = Guid.NewGuid().ToString();
 
             // Load Config from whatever source
-            _externalUrl = "myapi.azurewebsites.net";
-            _connectionDB = "myDBConnectionString";
+            
         }
 
         public static AppConfiguration GetConfigurationSingleton()
@@ -32,16 +31,7 @@ namespace SingletonPattern
             // the instance exists) avoids locking each
             // time the method is invoked
 
-            if (_instance == null)
-            {
-                lock (syncLock)
-                {
-                    if (_instance == null)
-                    {
-                        _instance = new AppConfiguration();
-                    }
-                }
-            }
+            
             return _instance;
         }
 

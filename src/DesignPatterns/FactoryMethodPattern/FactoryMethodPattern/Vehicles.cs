@@ -15,27 +15,18 @@ namespace FactoryMethodPattern
     /// <summary>
     /// Concrete vehicle
     /// </summary>
-    public class Truck : Vehicle
+    public class Truck 
     {
-        public override void DeliverProducts()
-        {
-            Console.WriteLine("Products delivered by truck");
-        }
+       
     }
 
-    public class Motorbike : Vehicle
+    public class Motorbike 
     {
-        public override void DeliverProducts()
-        {
-            Console.WriteLine("Products delivered by motorbike");
-        }
+       
     }
 
-    public class Ship : Vehicle
+    public class Ship 
     {
-        public override void DeliverProducts()
-        {
-            Console.WriteLine("Products delivered by ship");
-        }
+       
     }
 }

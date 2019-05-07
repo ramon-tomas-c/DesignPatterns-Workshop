@@ -15,22 +15,13 @@ namespace StrategyPattern
     /// <summary>
     /// A Concrete strategy class
     /// </summary>
-    public class DefaultSort : SortStrategy
+    public class DefaultSort 
     {
-        public override void Sort(List<string> list)
-        {
-            list.Sort();
-            Console.WriteLine("Sorted list ");
-        }
+        
     }
 
-    public class ReverseSort : SortStrategy
+    public class ReverseSort 
     {
-        public override void Sort(List<string> list)
-        {
-            list.Sort();
-            list.Reverse();
-            Console.WriteLine("ReverseSorted list");
-        }
+        
     }
 }
