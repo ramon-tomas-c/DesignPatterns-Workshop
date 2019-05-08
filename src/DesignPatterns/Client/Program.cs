@@ -5,6 +5,8 @@ using BuilderPattern;
 using DecoratorPattern;
 using System.Collections.Generic;
 using StrategyPattern;
+using StatePattern;
+using ObserverPattern;
 
 namespace Client
 {
