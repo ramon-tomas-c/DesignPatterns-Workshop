@@ -43,7 +43,7 @@ namespace Api
             });
 
             // Register repository
-            services.AddScoped<IRepository<Order>, OrderRepository>();
+            // services.AddScoped<IRepository<Order>, OrderRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
